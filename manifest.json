@@ -1,0 +1,53 @@
+{
+  "name": "ARTT 2024",
+  "short_name": "ARTT",
+  "description": "Reprenez le contrôle sur votre vie, tout simplement",
+  "theme_color": "#023b4e",
+  "background_color": "#e4f6fc",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": ".png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any //on fait le cercle de l'application"
+    },
+    {
+      "src": ".png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable // on laisse le carré entier pour que l'os face l'icone tout seul"
+    },
+    {
+      "src": "src/icons/icon-512x512-any.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/icons/icon-512x512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "src/screenshots/narrow.png",
+      "sizes": "390x720",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Interface de l'application TodoList"
+    },
+    {
+      "src": "src/screenshots/wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Interface de l'application TodoList"
+    }
+  ]
+}
