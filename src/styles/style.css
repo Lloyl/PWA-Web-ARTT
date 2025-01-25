@@ -16,45 +16,51 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-file{
+file {
   padding: 5%;
 }
-input, label {
-  display:block;
+input,
+label {
+  display: block;
   text-align: center;
   font-size: 1rem;
 }
 
-input[type=submit] {
-  width: 20em;  height: 4em;
+input[type="submit"] {
+  width: 20em;
+  height: 4em;
 }
 
-input[type=file] {
-  width: 20em;  height: 4em;
+input[type="file"] {
+  width: 20em;
+  height: 4em;
 }
 
-.modelPreview{
+.modelPreview {
   position: absolute; /* postulat de départ */
-  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  top: 50%;
+  left: 50%; /* à 50%/50% du parent référent */
   transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
   width: 50vw;
   height: 50vh;
 }
-.patternImgPreview{
+.patternImgPreview {
   width: 20vw;
   height: auto;
 }
-iframe{
+iframe {
   position: absolute; /* postulat de départ */
-  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  top: 50%;
+  left: 50%; /* à 50%/50% du parent référent */
   transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
-  width: 80% ;
+  width: 80%;
   height: 80%;
 }
 
-article{
+article {
   justify-content: left;
 }
+
 @media screen and (max-width: 601px) {
   .navbar {
     background-color: #333;
@@ -136,9 +142,18 @@ article{
     height: auto; /* Garde le ratio hauteur/largeur */
   }
 
-  .modelUploader{
+  .modelUploader {
     display: flex;
     flex-direction: row;
+  }
+
+  iframe {
+    position: absolute; /* postulat de départ */
+    top: 50%;
+    left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    width: 80%;
+    height: 60%;
   }
 }
 
@@ -181,5 +196,13 @@ article{
     max-width: 75px; /* Taille maximale de l'image */
     height: auto; /* Garde le ratio hauteur/largeur */
   }
-}
 
+  iframe {
+    position: absolute; /* postulat de départ */
+    top: 50%;
+    left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+    width: 80%;
+    height: 60%;
+  }
+}
