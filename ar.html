@@ -2,44 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-    />
-    <title>Réalité augmentée</title>
-    <script src="node_modules/@ar-js-org/ar.js/" defer></script>
-    <script src="src/scripts/script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Augmented tabletop</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
   </head>
-  <script src="https://aframe.io/releases/0.8.0/aframe.js"></script>
-  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
-
-  <body>
-    <a href="index.html">retour</a>
-    <a-scene
-      embedded
-      arjs="sourceType : webcam; paternRation : 0.50;debugUIEnabled : false"
-    >
-      <a-marker preset="custom" type="pattern" url="src/patt/zedpattern.patt">
-        <a-entity
-          position="0 0 0"
-          scale="0.1 0.1 0.1"
-          gltf-model="src/3d-models/zedmodel.gltf"
-        ></a-entity>
-      </a-marker>
-
-      <a-marker
-        preset="custom"
-        type="pattern"
-        url="src/patt/dragonpattern.patt"
-      >
-        <a-entity
-          position="0 0 0"
-          scale="0.08 0.08 0.08"
-          gltf-model="src/3d-models/dragon.gltf"
-        ></a-entity>
-      </a-marker>
-
-      <a-entity>camera</a-entity>
-    </a-scene>
+  <body style="margin: 0px">
+    <main>
+      <h1>AR display</h1>
+    <iframe src="scene.html" alt="Camera display"></iframe>
+    <nav class="navbar">
+      <a href="ar.html">
+        <img src="src/media/ar_goggles_active.webp" alt="Launch AR" class="imgNavbar" />
+        <p>AR</p>
+      </a>
+      <a href="bibliotheque.html">
+        <img src="src/media/book.webp" alt="Your library" class="imgNavbar" />
+        <p>Models</p>
+      </a>
+      <a href="index.html">
+        <img src="src/media/home.webp" alt="Home button" class="imgNavbar" />
+        <p>Home</p>
+      </a>
+      <a href="ajouter_model.html">
+        <img src="src/media/download.webp" alt="Import new model" class="imgNavbar" />
+        <p>Import</p>
+      </a>
+    </nav>
+    </main>
   </body>
 </html>

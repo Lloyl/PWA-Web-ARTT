@@ -4,32 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles/style.css" />
-    <title>Document</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <title>Augmented tabletop</title>
   </head>
   <body>
     <main>
-      <file>
-        <input type="file" class="button" />
-      </file>
+      <h1>Import</h1>
+      <section class="modelUploader">
+        <file>
+          <label for="modelUpload">Select a 3D model</label>
+          <input type="file" id="modelUpload" class="button" size="90"/>
+          <input type="submit" value="Submit">
+        </file>
+        <model-viewer class="modelPreview"
+          src="src/3D-models/ZedModel.gltf" 
+          controls auto-rotate 
+          poster="src/pattern_images/Zedpattern"
+          alt="Your 3D model preview here"
+        ></model-viewer>
+      </section>
+
       <nav class="navbar">
         <a href="ar.html">
-          <img src="src/media/ar_goggles.webp" class="imgNavbar" />
+          <img src="src/media/ar_goggles.webp" alt="Launch AR" class="imgNavbar" />
           <p>AR</p>
         </a>
         <a href="bibliotheque.html">
-          <img src="src/media/book.webp" class="imgNavbar" />
-          <p>Modèles</p>
+          <img src="src/media/book.webp" alt="Your library" class="imgNavbar" />
+          <p>Models</p>
         </a>
         <a href="index.html">
-          <img src="src/media/home.webp" class="imgNavbar" />
-          <p>Maison</p>
+          <img src="src/media/home.webp" alt="Home button" class="imgNavbar" />
+          <p>Home</p>
         </a>
         <a href="ajouter_model.html">
-          <img src="src/media/download_active.webp" class="imgNavbar" />
+          <img src="src/media/download_active.webp" alt="Import new model" class="imgNavbar" />
           <p>Import</p>
         </a>
       </nav>
-      <footer>Simon Tronelle 2024-2025 ©</footer>
+
     </main>
   </body>
 </html>

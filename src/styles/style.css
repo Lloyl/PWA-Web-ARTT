@@ -16,18 +16,45 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-/* .menu {
-  display: flex;
-  flex-direction: row;
-  gap: 5vh;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: start;
-  margin-top: 10%;
-  position: fixed;
-  bottom: 0;
-} */
+file{
+  padding: 5%;
+}
+input, label {
+  display:block;
+  text-align: center;
+  font-size: 1rem;
+}
+
+input[type=submit] {
+  width: 20em;  height: 4em;
+}
+
+input[type=file] {
+  width: 20em;  height: 4em;
+}
+
+.modelPreview{
+  position: absolute; /* postulat de départ */
+  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+  width: 50vw;
+  height: 50vh;
+}
+.patternImgPreview{
+  width: 20vw;
+  height: auto;
+}
+iframe{
+  position: absolute; /* postulat de départ */
+  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+  width: 80% ;
+  height: 80%;
+}
+
+article{
+  justify-content: left;
+}
 @media screen and (max-width: 601px) {
   .navbar {
     background-color: #333;
@@ -51,7 +78,7 @@ body {
     align-items: center;
     padding: 14px;
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 3vw;
     height: 100%;
     width: 100%;
   }
@@ -60,12 +87,6 @@ body {
   .navbar a:hover {
     background-color: #ddd;
     color: black;
-  }
-
-  /* Add a color to the active/current link */
-  .navbar a.active {
-    background-color: #04aa6d;
-    color: white;
   }
 
   .imgNavbar {
@@ -109,15 +130,56 @@ body {
     color: black;
   }
 
-  /* Add a color to the active/current link */
-  .navbar a.active {
-    background-color: #04aa6d;
-    color: white;
-  }
-
   .imgNavbar {
     width: 30%; /* L'image prend 20% de la largeur du bouton */
     max-width: 25px; /* Taille maximale de l'image */
     height: auto; /* Garde le ratio hauteur/largeur */
   }
+
+  .modelUploader{
+    display: flex;
+    flex-direction: row;
+  }
 }
+
+@media screen and (min-width: 1000px) {
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    justify-content: space-around;
+  }
+
+  /* Style the links inside the navigation bar */
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 25px;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Change the color of links on hover */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .imgNavbar {
+    width: 30%; /* L'image prend 20% de la largeur du bouton */
+    max-width: 75px; /* Taille maximale de l'image */
+    height: auto; /* Garde le ratio hauteur/largeur */
+  }
+}
+
