@@ -10,15 +10,18 @@ main {
 h1 {
   text-align: center;
 }
+
 body {
   height: 100vh;
   width: 100vw;
   margin: 0;
   box-sizing: border-box;
 }
+
 file {
   padding: 5%;
 }
+
 input,
 label {
   display: block;
@@ -49,10 +52,10 @@ input[type="file"] {
   height: auto;
 }
 iframe {
-  position: absolute; /* postulat de départ */
+  position: absolute; /* base position */
   top: 50%;
-  left: 50%; /* à 50%/50% du parent référent */
-  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+  left: 50%; /* anchor at 50% of the parent */
+  transform: translate(-50%, -50%); /* translate iframe to be in the middle*/
   width: 80%;
   height: 80%;
 }
